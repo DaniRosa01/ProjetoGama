@@ -37,11 +37,11 @@
                 <h5>Front-End Developer</h5>
             </div>
 
-            <div id="arrow">
-                <i class="fas fa-sort-down"></i>
+            <div onclick="displayAbout()" id="arrow">
+                <i id="animation" class="fas fa-sort-down"></i>
             </div>
 
-            <div id="about">
+            <div style="display: none" id="about">
                 <p>
                     Sou de Blumenau S.C estudo programação, estou amando,
                     fiz um curso da Gama ACademy, com 120 horas, continuo
@@ -61,6 +61,15 @@
             </div>
         </section>
     </main>
+
+    <script>
+        function displayAbout() {
+            var arrow = document.getElementById('animation');
+            arrow.classList.toggle('rotate'); 
+            var display = document.getElementById('about');
+            display.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
       
